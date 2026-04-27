@@ -30,6 +30,15 @@ void primMST(int raiz)
 
         vertices[u].enQ = 0; //sacar de la cola
 
+
+        // Imprimir el nodo descubierto
+        if (vertices[u].pi == -1){
+            printf("Paso %2d: Nodo Raiz inicial: Casa %c\n", count + 1, u + 'A');
+        }else{
+            printf("Paso %2d: Casa %c -> Casa %c | Peso: %d\n",
+                    count + 1, vertices[u].pi + 'A', u + 'A', vertices[u].key);
+        }
+
         // Revisar las casas vecinas
 
         for (int v = 0; v < V; v++)
@@ -47,12 +56,7 @@ void primMST(int raiz)
     printf("Aristas del Arbol de expansión minimo:\n");
     int pesoTotal = 0;
     for (int i = 0; i < V; i++)
-    {
-        if (vertices[i].pi != -1){
-            printf("Casa %c - Casa %c (Peso %d)\n", vertices[i].pi + 'A', i + 'A', vertices[i].key);
             pesoTotal += vertices[i].key;
-        }
-    }
     printf("Peso total del MST: %d\n", pesoTotal);
 }
 
