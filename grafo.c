@@ -18,17 +18,17 @@ void agregarArista(int origen, int destino, int peso) {
 void cargarGrafo() {
     agregarArista(A, B, 100);
     agregarArista(A, D, 85);
-    agregarArista(A, E, 30);
+    agregarArista(A, D, 30);
 
-    agregarArista(B, C, 70);
+    agregarArista(B, C, 100);
     agregarArista(B, E, 40);
     agregarArista(B, F, 45);
+    agregarArista(B, G, 70);
 
     agregarArista(C, H, 60);
     agregarArista(C, G, 55);
 
     agregarArista(D, P, 50);
-    agregarArista(D, I, 90);
 
     agregarArista(E, I, 10);
 
@@ -42,24 +42,25 @@ void cargarGrafo() {
     agregarArista(H, L, 40);
 
     agregarArista(I, J, 60);
-    agregarArista(I, Q, 60);
+    agregarArista(I, P, 90);
 
     agregarArista(J, K, 80);
-    agregarArista(J, R, 45);
+    agregarArista(J, Q, 45);
 
     agregarArista(K, M, 60);
 
-    agregarArista(L, N, 50);
+    agregarArista(L, M, 50);
 
     agregarArista(M, S, 2);
-    agregarArista(M, T, 25);
 
     agregarArista(N, O, 120);
-    agregarArista(N, T, 55);
+    agregarArista(N, O, 105);
+    agregarArista(N, T, 60);
+    agregarArista(N, S, 55);
 
     agregarArista(O, T, 105);
 
-    agregarArista(P, Q, 205);
+    agregarArista(P, R, 205);
 
     agregarArista(Q, R, 5);
 
